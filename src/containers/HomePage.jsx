@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "../components/Header"
-import Carousel from "../components/Carousel"
+import CarouselComponent from "../components/Carousel"
 
 const HomePage = () => {
     return (
         <>
             <Header></Header>
-            <Carousel></Carousel>
+            <CarouselComponent></CarouselComponent>
         </>
     )
     

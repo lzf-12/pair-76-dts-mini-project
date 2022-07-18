@@ -1,46 +1,52 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
+import{ Carousel} from "flowbite-react/"
+import {allWeekTrend} from "../modules/FetchHandler"
+import poster1 from "../assets/poster/1.jpg"
+import poster2 from "../assets/poster/2.jpg"
+import poster3 from "../assets/poster/3.jpg"
+import poster4 from "../assets/poster/4.jpg"
+import poster5 from "../assets/poster/5.jpg"
 
-const Carousel = () => {
+const CarouselComponent = () => {
+
+    // const [top5weekList, settop5weekList] = useState([])
+
+    // useEffect(()=> {
+    //     allWeekTrend()
+    //     .then(top5weekList => settop5weekList(top5weekList))
+    //     .catch(error => {
+    //         console.log(error)
+    //     })
+    // }, [])
+    // console.log(top5weekList)
+
+
     return(
-    <div id="controls-carousel" className="relative" data-carousel="static">
-        {/* <!-- Carousel wrapper --> */}
-        <div className="overflow-hidden relative h-56 rounded-lg md:h-96">
-            {/* <!-- Item 1 --> */}
-            <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/docs/images/carousel/carousel-1.svg" className="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="..." />
-            </div>
-            {/* <!-- Item 2 --> */}
-            <div className="hidden duration-700 ease-in-out" data-carousel-item="active">
-                <img src="/docs/images/carousel/carousel-2.svg" className="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="..." />
-            </div>
-            {/* <!-- Item 3 --> */}
-            <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/docs/images/carousel/carousel-3.svg" className="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="..." />
-            </div>
-            {/* <!-- Item 4 --> */}
-            <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/docs/images/carousel/carousel-4.svg" className="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="..." />
-            </div>
-            {/* <!-- Item 5 --> */}
-            <div className="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="/docs/images/carousel/carousel-5.svg" className="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="..." />
-            </div>
-        </div>
-        {/* <!-- Slider controls --> */}
-        <button type="button" className="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
-            <span className="inline-flex justify-center items-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg aria-hidden="true" className="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path></svg>
-                <span className="sr-only">Previous</span>
-            </span>
-        </button>
-        <button type="button" className="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
-            <span className="inline-flex justify-center items-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                <svg aria-hidden="true" className="w-6 h-6 text-white dark:text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path></svg>
-                <span className="sr-only">Next</span>
-            </span>
-        </button>
+    <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
+        <Carousel>
+            <img
+            src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
+            alt="..."
+            />
+            <img
+            src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
+            alt="..."
+            />
+            <img
+            src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
+            alt="..."
+            />
+            <img
+            src="https://flowbite.com/docs/images/carousel/carousel-4.svg"
+            alt="..."
+            />
+            <img
+            src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
+            alt="..."
+            />
+        </Carousel>
     </div>
     )
 }
 
-export default Carousel;
+export default CarouselComponent;
