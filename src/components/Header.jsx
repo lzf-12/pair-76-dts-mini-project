@@ -1,5 +1,4 @@
 import React from "react";
-import "./header.css"
 import mainLogo from '../assets/logo.png'
 import ProfilePicture3 from '../assets/ProfilePicture3.png'
 
