@@ -1,12 +1,16 @@
 import React from "react";
 import Header from "../components/Header"
-import CarouselComponent from "../components/Carousel"
+import FooterComponent from "../components/Footer"
+import HeroCarousel from "../components/HeroCarousel"
+import MovieOfTheWeek from "../components/MovieOfTheWeek";
 
 const HomePage = () => {
     return (
         <>
             <Header></Header>
-            <CarouselComponent></CarouselComponent>
+            <HeroCarousel></HeroCarousel>
+            <MovieOfTheWeek></MovieOfTheWeek>
+            <FooterComponent></FooterComponent>
         </>
     )
     

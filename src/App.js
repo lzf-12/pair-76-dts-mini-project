@@ -4,7 +4,7 @@ import HomePage from "./containers/HomePage"
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bg-black">
       <HomePage></HomePage>
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
