@@ -5,7 +5,8 @@ import ProfilePicture3 from '../assets/ProfilePicture3.png'
 
 const Header = () => {
     return (
-    <nav className="bg-black border-black-200 px-2 sm:px-4 py-1 dark:bg-gray-900">
+    <>
+    <nav className="bg-black border-black-200 px-2 sm:px-4 py-1 dark:bg-gray-900 z-0">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
             <a href="https://flowbite.com/" className="flex items-center">
                 <img src={mainLogo} className="mr-3 h-6 sm:h-9" alt="Main Logo" />
@@ -95,12 +96,25 @@ const Header = () => {
                 </li>
                 <li>
                 <a href="#" className="block py-2 pr-4 pl-3 hover:text-white active:text-white text-neutral-400 md:border-0 md:hover:text-white-700 md:p-0 ">My List</a>
+                <div className="bg-black text-white border-white border-2 w-24 z-10 absolute right-0">
+                    Logout
+                </div>
                 </li>
             </ul>
             </div>
         </div>
     </nav>
+    
+    </>
     )
+}
+
+function showMenu(){
+
+}
+
+function hideMenu(){
+    
 }
 
 export default Header

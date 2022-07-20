@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      maxWidth: {
+        '1/2': '50%',
+      },
       spacing: {
         '2/3': '66.666667%'
       }

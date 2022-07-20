@@ -1,11 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
 import HomePage from "./containers/HomePage"
+import LoginRegisterPage from './containers/LoginRegisterPage';
 
 function App() {
   return (
     <div className="App bg-black">
       <HomePage></HomePage>
+      {/* <LoginRegisterPage></LoginRegisterPage> */}
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
