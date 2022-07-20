@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useReducer } from "react";
 import{ Carousel, Card} from "flowbite-react/"
-import { moviesWeekTrend } from "../modules/FetchHandler"
+import { moviesWeekTrend } from "../data/FetchHandler"
 
 const initialState = {
     loading:true,

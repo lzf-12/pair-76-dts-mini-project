@@ -1,5 +1,5 @@
 import React, {useEffect, useState, useReducer } from "react";
-import { tvWeekTrend } from "../modules/FetchHandler"
+import { tvWeekTrend } from "../data/FetchHandler"
 
 const initialState = {
     loading:true,

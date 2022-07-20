@@ -1,5 +1,5 @@
 import React from "react";
-import{ Card, Label, TextInput, Button, No } from "flowbite-react/"
+import ProfilePicture3 from '../assets/ProfilePicture3.png'
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,7 +11,9 @@ const LoginRegisterPage = () => {
     return (
         <>
             <div className="flex items-center h-screen">
-            <div className="flex-1 basis-1/2"></div>
+            <div className="flex-1 basis-1/2">
+                <img src={ProfilePicture3} className="object-fill h-full w-full" />
+            </div>
             <div class="h-full w-full flex-2 flex items-center p-4 max-w-1/2 bg-white rounded-lg border border-gray-200 shadow-md sm:p-6 lg:p-8 dark:bg-gray-800 dark:border-gray-700 ">
                 <form class="space-y-6  w-full" action="#">
                     <h5 class="text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h5>

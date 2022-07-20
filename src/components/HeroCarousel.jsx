@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useReducer} from "react";
 import{ Carousel} from "flowbite-react/"
-import { allWeekTrend } from "../modules/FetchHandler"
+import { allWeekTrend } from "../data/FetchHandler"
 
 const initialState = {
     loading:true,
@@ -30,7 +30,6 @@ const reducer = (state, action) => {
 const HeroCarousel = () => {
 
     const [state, dispatch] = useReducer(reducer,  initialState )
-    const [top5weekList, settop5weekList] = useState([])
 
     useEffect(()=> {
         allWeekTrend()
@@ -41,7 +40,6 @@ const HeroCarousel = () => {
             dispatch({type: 'FETCH_ERROR', error: err})
         })
     }, [state])
-    console.log(top5weekList)
 
 
     return (
