@@ -62,19 +62,19 @@ const MovieDetail = () => {
     return (
         <>
             {/* <p className="text-white">id is {params.showId} </p> */}
-            <p className="text-white text-5xl">{showTitle}</p>
+            <p className="text-white text-5xl mt-5">{showTitle}</p>
             <div className="text-white mt-2">
                 <span className=" uppercase">{mediaType} &#8226; </span>
                 <span className=" uppercase">{showLang} &#8226; </span>
-                <span className="">{voteAverage}</span>
+                <span className="">{parseFloat(voteAverage).toFixed(2)} &#9733;</span>
             </div>
             <div className="flex ">
-                    <div className="flex flex-2 flex-col items-center">
-                        <p className="text-white p-8">{showDesc}</p>
+                    <div className="flex flex-2 flex-col items-center basis 2/3 w-[50%]">
+                        <p className="text-white p-12">{showDesc}</p>
                         <button className="bg-black text-white border-white border-2 w-36 z-10 p-3">Watch Show</button>
                     </div>
-                    <div className="flex-auto flex-1 basis-5/12">
-                        <img alt={showTitle} src={"https://image.tmdb.org/t/p/w500/" + showBackdrop} />
+                    <div className="flex-auto flex-1 basis-1/3">
+                        <img className="mt-3 p-3" alt={showTitle} src={"https://image.tmdb.org/t/p/w500/" + showBackdrop} />
                     </div>
 
             </div>
