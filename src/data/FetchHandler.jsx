@@ -13,7 +13,7 @@ const allWeekTrend = async () => {
         const sorted = list20.sort((a,b) => b.vote_average - a.vote_average)
         const topweek5 = sorted.slice(0,5)
 
-        return await topweek5
+        return topweek5
     }
     catch(error) {
         console.log(error)
@@ -27,7 +27,7 @@ const moviesWeekTrend = async () => {
         const json = await data.json()
         const list20 = json.results
 
-        return await list20
+        return list20
     }
     catch(error) {
         console.log(error)
@@ -40,11 +40,38 @@ const tvWeekTrend = async () => {
         const json = await data.json()
         const list20 = json.results
 
-        return await list20
+        return list20
     }
     catch(error) {
         console.log(error)
     }
 }
 
-export {allWeekTrend, moviesWeekTrend, tvWeekTrend};
+
+const getGenreMovieList = async () => {
+    try{
+        const data = await fetch('https://api.themoviedb.org/3/genre/movie/list?api_key=046cd30b3f95a6fffc0a81069cc46091&language=en-US', requestOptions)
+        const json = await data.json()
+        const list20 = json.genres
+
+        return list20
+    }
+    catch(error) {
+        console.log(error)
+    }
+}
+
+const getGenreTvList = async () => {
+    try{
+        const data = await fetch('https://api.themoviedb.org/3/genre/tv/list?api_key=046cd30b3f95a6fffc0a81069cc46091&language=en-US', requestOptions)
+        const json = await data.json()
+        const list20 = json.genres
+
+        return list20
+    }
+    catch(error) {
+        console.log(error)
+    }
+}
+
+export {allWeekTrend, moviesWeekTrend, tvWeekTrend, getGenreMovieList, getGenreTvList};

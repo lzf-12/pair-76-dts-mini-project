@@ -1,17 +1,16 @@
 import React from "react";
 import Header from "../components/Header"
 import FooterComponent from "../components/Footer"
-import HeroCarousel from "../components/HeroCarousel"
+import MovieDetail from "../components/MovieDetails";
 import MovieOfTheWeek from "../components/MovieOfTheWeek";
 import TvOfTheWeek from "../components/TvOfTheWeek";
+import { Route, useParams} from "react-router-dom";
 
-
-
-const HomePage = () => {
+const MovieSelected = () => {
     return (
         <>
             <Header></Header>
-            <HeroCarousel></HeroCarousel>
+            <MovieDetail></MovieDetail>
             <MovieOfTheWeek></MovieOfTheWeek>
             <TvOfTheWeek></TvOfTheWeek>
             <FooterComponent></FooterComponent>
@@ -20,4 +19,4 @@ const HomePage = () => {
     
 }
 
-export default HomePage
+export default MovieSelected
