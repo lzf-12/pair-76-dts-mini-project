@@ -114,9 +114,5 @@ const Header = () => {
     )
 }
 
-function toggleMenu(){
-
-}
-
 
 export default Header

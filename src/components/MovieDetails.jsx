@@ -1,5 +1,5 @@
-import React, {useEffect, useState, useReducer} from "react";
-import { route, useParams, useNavigate } from "react-router-dom";
+import React, {useEffect, useReducer} from "react";
+import { useParams } from "react-router-dom";
 import { tvWeekTrend, moviesWeekTrend } from "../data/FetchHandler"
 
 

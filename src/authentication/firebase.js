@@ -35,3 +35,10 @@ const registerDenganEmailDanPassword = async (email, password) => {
     }
 
 } 
+
+
+const loginDenganEmailDanPasssword = () => {}
+
+const resetPasswordKarenaLupa = () => {}
+
+const keluarDariAplikasi = () => {}

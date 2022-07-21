@@ -1,7 +1,7 @@
-import React, {useEffect, useState, useReducer} from "react";
+import React, {useEffect, useReducer} from "react";
 import{ Carousel} from "flowbite-react/"
 import { allWeekTrend } from "../data/FetchHandler"
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const initialState = {
     loading:true,
@@ -31,7 +31,7 @@ const reducer = (state, action) => {
 const HeroCarousel = () => {
 
     const [state, dispatch] = useReducer(reducer,  initialState )
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     useEffect(()=> {
         allWeekTrend()
