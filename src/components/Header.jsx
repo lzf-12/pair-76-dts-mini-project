@@ -1,9 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import mainLogo from '../assets/logo.png'
 import ProfilePicture3 from '../assets/ProfilePicture3.png'
+import { Link } from 'react-router-dom';
+
 
 
 const Header = () => {
+
+    const [hidden, setHidden] = useState(true);
+
     return (
     <>
     <nav className="bg-black border-black-200 px-2 sm:px-4 py-1 dark:bg-gray-900 z-0">
@@ -42,12 +47,13 @@ const Header = () => {
                     {/* </button> */}
 
                     {/* triangle button */}
-                    <button type="button" className="text-red-700 md:text-white rounded-lg text-sm p-2.5 mr-1">
+                    <button onClick= {() => setHidden(s=> !s)}type="button" className="text-red-700 md:text-white rounded-lg text-sm p-2.5 mr-1">
                         <svg className="w-5 h-5" viewBox="0 0 24 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path d="M13.5927 11.2795L23.9452 0.250125C23.9722 0.229507 23.9908 0.199734 23.9974 0.166405C24.0039 0.133077 23.9981 0.0984877 23.981 0.069141C23.9639 0.0397943 23.9366 0.017712 23.9044 0.00704594C23.8721 -0.00362016 23.8371 -0.00213564 23.8059 0.0112211H0.194149C0.162909 -0.00213564 0.127867 -0.00362016 0.0956101 0.00704594C0.063353 0.017712 0.036103 0.0397943 0.0189841 0.069141C0.00186515 0.0984877 -0.00394355 0.133077 0.00264983 0.166405C0.0092432 0.199734 0.0277846 0.229507 0.0547879 0.250125L10.4073 11.2795C10.612 11.4965 10.8589 11.6693 11.1328 11.7874C11.4066 11.9055 11.7017 11.9664 12 11.9664C12.2983 11.9664 12.5934 11.9055 12.8672 11.7874C13.1411 11.6693 13.388 11.4965 13.5927 11.2795Z"  fill="currentColor"/>
                         </svg>
 
                     </button>
+                     {!hidden ? <Link to="/select-account"><div className="bg-black text-white border-white border-2 w-24 z-10 absolute top-8 right-0">Logout</div></Link> : null}
                 </div>
 
                 <div className="hidden relative md:block">
@@ -83,7 +89,9 @@ const Header = () => {
             </div>
             <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                 <li>
-                <a href="#" className="block py-2 pr-4 pl-3 hover:text-white active:text-white text-neutral-400 md:bg-transparent md:text-white-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+                <Link to="/">
+                    <p className="block py-2 pr-4 pl-3 hover:text-white active:text-white text-neutral-400 md:bg-transparent md:text-white-700 md:p-0 dark:text-white" aria-current="page">Home</p>
+                </Link>
                 </li>
                 <li>
                 <a href="#" className="block py-2 pr-4 pl-3 hover:text-white active:text-white text-neutral-400 md:border-0 md:hover:text-white-700 md:p-0 ">Series</a>
@@ -96,9 +104,6 @@ const Header = () => {
                 </li>
                 <li>
                 <a href="#" className="block py-2 pr-4 pl-3 hover:text-white active:text-white text-neutral-400 md:border-0 md:hover:text-white-700 md:p-0 ">My List</a>
-                <div className="bg-black text-white border-white border-2 w-24 z-10 absolute right-0">
-                    Logout
-                </div>
                 </li>
             </ul>
             </div>
@@ -109,12 +114,9 @@ const Header = () => {
     )
 }
 
-function showMenu(){
+function toggleMenu(){
 
 }
 
-function hideMenu(){
-    
-}
 
 export default Header

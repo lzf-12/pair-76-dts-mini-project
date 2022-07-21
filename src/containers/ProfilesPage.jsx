@@ -22,20 +22,28 @@ const ProfilePages = () => {
                 <div className="relative top-20 text-4xl font-medium text-white z-2">Who's watching</div>
                 <div className="flex flex-row gap-x-20 justify-center flex-wrap relative top-[8em] z-3">
                     <div>
+                    <Link to="/login">
                         <img src={ProfilePicture1} className="w-[100px] h-[100px]"/>
                         <p className="relative top-5">Murat</p>
+                    </Link>    
                     </div>
                     <div>
+                    <Link to="/login">
                         <img src={ProfilePicture2} className="w-[100px] h-[100px]"/>
                         <p className="relative top-5">Umut</p>
+                    </Link>
                     </div>
                     <div>
+                    <Link to="/login">
                         <img src={ProfilePicture3} className="w-[100px] h-[100px]"/>
                         <p className="relative top-5">Kemal</p>
+                    </Link>
                     </div>
                     <div>
+                    <Link to="/login">
                         <img src={ProfilePicture4} className="w-[100px] h-[100px]"/>
                         <p className="relative top-5">Cocuk</p>
+                    </Link>
                     </div>
                     <div>
                         <svg width="100" height="100" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">

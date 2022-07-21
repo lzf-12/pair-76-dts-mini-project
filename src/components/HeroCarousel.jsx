@@ -1,6 +1,7 @@
 import React, {useEffect, useState, useReducer} from "react";
 import{ Carousel} from "flowbite-react/"
 import { allWeekTrend } from "../data/FetchHandler"
+import { useNavigate } from "react-router-dom";
 
 const initialState = {
     loading:true,
@@ -30,6 +31,7 @@ const reducer = (state, action) => {
 const HeroCarousel = () => {
 
     const [state, dispatch] = useReducer(reducer,  initialState )
+    const navigate = useNavigate()
 
     useEffect(()=> {
         allWeekTrend()
@@ -39,15 +41,15 @@ const HeroCarousel = () => {
         .catch(err=> {
             dispatch({type: 'FETCH_ERROR', error: err})
         })
-    }, [state])
+    }, [])
 
 
     return (
         <>
             <div className="w-100 h-56 sm:h-64 xl:h-80 2xl:h-96 z-0">
-                <Carousel slide={false} className="">
+                <Carousel slide={false} className="" >
                 {state.post.map((item, index) => (
-                    <div className="flex h-full relative overflow-hidden bg-black">
+                    <div key={item.id} className="flex h-full relative overflow-hidden bg-black">
                         <div className="bg-black flex-auto w-fit z-50">
                             <div className="text-white mt-7 text-4xl ">
                                 <span className="uppercase">

@@ -1,11 +1,7 @@
 import React, {useEffect, useState, useReducer } from "react";
 import { tvWeekTrend } from "../data/FetchHandler"
-
-const initialState = {
-    loading:true,
-    error: '',
-    post: []
-}
+import { useNavigate } from "react-router-dom";
+import {TOTWinitialState} from "../store/store"
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -27,7 +23,9 @@ const reducer = (state, action) => {
 }
 const TvOfTheWeek = () => {
 
-    const [state, dispatch] = useReducer(reducer,  initialState )
+    const [state, dispatch] = useReducer(reducer,  TOTWinitialState )
+
+    let navigate = useNavigate()
 
     useEffect(()=> {
         tvWeekTrend()
@@ -37,9 +35,9 @@ const TvOfTheWeek = () => {
         .catch(err=> {
             dispatch({type: 'FETCH_ERROR', error: err})
         })
-    }, [state])
+    }, [])
 
-    console.log(state)
+    //console.log(TOTWinitialState)
 
 
     return (
@@ -47,16 +45,15 @@ const TvOfTheWeek = () => {
         <div className="m-5 text-white text-left text-3xl font-weight:700 z-0"><h2>TV Of The Week</h2></div>
         <div className="relative flex flex-row flex-wrap z-0 gap-2">
             {state.post.map((item, index)=> (
-                <div className="w-40 min-w-40 max-w-xs bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
-                    <a href="#">
+                <div onClick={() => {
+                    let path = `/showdetail=${item.id}`
+                    navigate(path)
+                    }} showId={item.id} className="w-40 min-w-40 max-w-xs bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                         <img className="rounded-t-lg" src={"https://image.tmdb.org/t/p/w500/" + item.poster_path} alt="" />
                         {/* <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" /> */}
-                    </a>
                     <div className="p-1">
-                        <a href="#">
                             {item.name}
                             {/* <p className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</p> */}
-                        </a>
                     </div>
                 </div>
             ))}

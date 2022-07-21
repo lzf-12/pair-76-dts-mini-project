@@ -4,12 +4,8 @@ import FooterComponent from "../components/Footer"
 import HeroCarousel from "../components/HeroCarousel"
 import MovieOfTheWeek from "../components/MovieOfTheWeek";
 import TvOfTheWeek from "../components/TvOfTheWeek";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+
+
 
 const HomePage = () => {
     return (
