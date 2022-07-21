@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useReducer } from "react";
+import React, {useEffect, useReducer } from "react";
 import { tvWeekTrend } from "../data/FetchHandler"
 import { useNavigate } from "react-router-dom";
 import {TOTWinitialState} from "../store/store"

@@ -74,7 +74,7 @@ const MovieDetail = () => {
                         <button className="bg-black text-white border-white border-2 w-36 z-10 p-3">Watch Show</button>
                     </div>
                     <div className="flex-auto flex-1 basis-5/12">
-                        <img src={"https://image.tmdb.org/t/p/w500/" + showBackdrop} />
+                        <img alt={showTitle} src={"https://image.tmdb.org/t/p/w500/" + showBackdrop} />
                     </div>
 
             </div>

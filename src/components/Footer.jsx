@@ -6,7 +6,7 @@ const FooterComponent = () => {
     <footer className="bg-black dark:bg-gray-900 z-0">
     <div className="grid grid-cols-2 gap-8 py-8 px-6 md:grid-cols-4">
         <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400"></h2>
+            {/* <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400"></h2> */}
             <ul className="text-gray-500 dark:text-gray-400">
                 <li className="mb-4">
                     <p className=" hover:underline">Audio and Subtitles</p>
@@ -23,7 +23,7 @@ const FooterComponent = () => {
             </ul>
         </div>
         <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400"></h2>
+            {/* <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400"></h2> */}
             <ul className="text-gray-500 dark:text-gray-400">
                 <li className="mb-4">
                     <p className="hover:underline">Audio Description</p>
@@ -37,7 +37,7 @@ const FooterComponent = () => {
             </ul>
         </div>
         <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400"></h2>
+            {/* <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400"></h2> */}
             <ul className="text-gray-500 dark:text-gray-400">
                 <li className="mb-4">
                     <p className="hover:underline">Help Center</p>
@@ -51,7 +51,7 @@ const FooterComponent = () => {
             </ul>
         </div>
         <div>
-            <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400"></h2>
+            {/* <h2 className="mb-6 text-sm font-semibold text-gray-500 uppercase dark:text-gray-400"></h2> */}
             <ul className="text-gray-500 dark:text-gray-400">
                 <li className="mb-4">
                     <p className="hover:underline">Gift Cards</p>
