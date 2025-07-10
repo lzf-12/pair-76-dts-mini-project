@@ -1,8 +1,7 @@
-import React, {useEffect, useState, useReducer } from "react";
-import{ Carousel, Card} from "flowbite-react/"
+import React, {useEffect, useReducer } from "react";
 import { moviesWeekTrend } from "../data/FetchHandler"
 import { useNavigate } from "react-router-dom";
-import { MOTWinitialState, allShowData } from "../store/store";
+import { MOTWinitialState } from "../store/store";
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -49,7 +48,7 @@ const MovieOfTheWeek = () => {
                 <div onClick={() => {
                     let path = `/showdetail=${item.id}`
                     navigate(path)
-                    }} showId={item.id} className="cursor-pointer w-40 min-w-40 max-w-xs bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
+                    }} key={item.id} className="cursor-pointer w-40 min-w-40 max-w-xs bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700">
                         <img className="rounded-t-lg" src={"https://image.tmdb.org/t/p/w500/" + item.poster_path} alt="" />
                         {/* <img className="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" /> */}
                     <div className="p-1">

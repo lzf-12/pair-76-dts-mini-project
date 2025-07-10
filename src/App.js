@@ -1,10 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import HomePage from "./containers/HomePage"
 import LoginRegisterPage from './containers/LoginRegisterPage';
 import ProfilePages from './containers/ProfilesPage';
 import MovieSelected from './containers/MovieSelected'
-import { Route, Routes, useParams } from 'react-router-dom';
+import { Route, Routes} from 'react-router-dom';
 
 function App() {
   return (
